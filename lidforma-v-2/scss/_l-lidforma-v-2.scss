@@ -1,0 +1,198 @@
+.lidforma-v-2 {
+  overflow: hidden;
+  background-color: #f5f5f5;
+
+  &__wrapper {
+    position: relative;
+    max-width: 1130px;
+    padding: 85px 0 82px;
+
+    @include desktop {
+      max-width: 930px;
+      padding: 70px 0 61px;
+    }
+
+    @include desktopsm {
+      max-width: 826px;
+    }
+
+    @include laptop {
+      max-width: none;
+      padding: 45px 0;
+    }
+
+    @include mobile {
+      padding: 47px 0 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #000;
+
+    @include desktop {
+      margin: 0 0 9px;
+      font-size: 21px;
+    }
+  }
+
+  &__description {
+    margin: 0 0 32px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    color: #000000;
+
+    @include desktop {
+      margin: 0 0 26px;
+      font-size: 16px;
+    }
+
+    @include laptop {
+      margin: 0 0 38px;
+    }
+
+    @include mobile {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0 0 15px;
+
+    @include desktop {
+      gap: 20px;
+    }
+
+    @include laptop {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 360px;
+      margin-bottom: 19px;
+    }
+
+    @include mobile {
+      max-width: none;
+      margin-bottom: 16px;
+    }
+
+    &-input,
+    &-button {
+      display: flex;
+      align-items: center;
+      flex: 1 0 30%;
+      padding: 4px 19px;
+      min-height: 56px;
+      box-sizing: border-box;
+      border-radius: 3px;
+
+      @include desktop {
+        min-height: 46px;
+      }
+
+      @include laptop {
+        flex: 0 1 auto;
+        width: 100%;
+      }
+
+      @include mobile {
+        height: 52px;
+      }
+    }
+
+    &-input {
+      font-weight: 400;
+      font-size: 18px;
+      color: #7d7d7d;
+      border: 2px solid #f5ac7f;
+
+      @include desktop {
+        font-size: 14px;
+      }
+
+      @include mobile {
+        font-size: 15px;
+      }
+
+      &:user-invalid {
+        border-color: #ff0000;
+      }
+    }
+
+    &-button {
+      justify-content: center;
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fefefe;
+      border: 2px solid #ff6200;
+      background-color: #ff6200;
+      cursor: pointer;
+
+      @include desktop {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__agreement {
+    margin: 0 0 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #b3b3b3;
+
+    @include laptop {
+      max-width: 360px;
+    }
+
+    @include mobile {
+      max-width: none;
+    }
+
+    & > a {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    top: 10px;
+    left: calc(100% + 34px);
+    bottom: 10px;
+    margin: 0;
+
+    @include desktopsm {
+      left: calc(100% + 14px);
+    }
+
+    @include laptop {
+      top: 124px;
+      left: 444px;
+      bottom: 0;
+    }
+
+    @include tablet {
+      left: 380px;
+    }
+
+    @include mobile {
+      position: static;
+      height: 250px;
+    }
+
+    &-image {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+}

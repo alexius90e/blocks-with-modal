@@ -1,0 +1,604 @@
+.kviz-v-1 {
+  &__aaa {
+    @include desktop {
+    }
+
+    @include desktopsm {
+    }
+
+    @include laptop {
+    }
+
+    @include mobile {
+    }
+  }
+
+  &__title {
+    margin: 0 0 60px;
+    text-align: center;
+    text-wrap: balance;
+
+    @include desktop {
+      margin: 0 0 54px;
+    }
+
+    @include desktopsm {
+      margin: 0 0 48px;
+    }
+
+    @include laptop {
+      margin: 0 0 44px;
+    }
+
+    @include mobile {
+      margin: 0 0 34px;
+      text-align: left;
+    }
+  }
+
+  &__quiz {
+    position: relative;
+    padding: 80px 114px 100px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+
+    @include desktop {
+      padding: 60px 97px 92px;
+    }
+
+    @include desktopsm {
+      padding: 48px 78px 72px;
+    }
+
+    @include laptop {
+      padding: 48px 35px 72px;
+    }
+
+    @include mobile {
+      padding: 37px 26px 0px;
+    }
+
+    &-content {
+      position: relative;
+      z-index: 10;
+      max-width: 840px;
+
+      @include desktop {
+        max-width: 716px;
+      }
+
+      @include desktopsm {
+        max-width: 574px;
+      }
+
+      @include laptop {
+        max-width: 512px;
+      }
+
+      @include mobile {
+        max-width: none;
+        margin-bottom: 48px;
+      }
+
+      & .swiper {
+        &-wrapper {
+          @media screen and (min-width: 576px) {
+            height: 100% !important;
+          }
+        }
+      }
+    }
+
+    &-card {
+      &-tag {
+        width: fit-content;
+        padding: 10px 25px 12px 25px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 116%;
+        text-align: center;
+        color: #0e0e0e;
+        border-radius: 60px;
+        background-color: #fefefe;
+
+        @include desktop {
+          padding: 8px 21px 10px 21px;
+          font-size: 17px;
+        }
+
+        @include desktopsm {
+          padding: 6px 17px 8px 17px;
+          font-size: 14px;
+        }
+      }
+
+      &-title {
+        margin: 25px 0 6px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 130%;
+        color: #0e0e0e;
+
+        @include desktop {
+          margin: 21px 0 6px;
+          font-size: 25px;
+        }
+
+        @include desktopsm {
+          margin: 17px 0 3px;
+          font-size: 20px;
+        }
+
+        & b {
+          font-weight: 600;
+        }
+      }
+
+      &-description {
+        margin: 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: #838383;
+
+        @include desktop {
+          font-size: 15px;
+        }
+
+        @include desktopsm {
+          font-size: 14px;
+        }
+      }
+
+      &-inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 23px 20px;
+        margin-top: 34px;
+
+        @include desktop {
+          gap: 21px 16px;
+          font-size: 15px;
+        }
+
+        @include desktopsm {
+          gap: 15px 13px;
+          font-size: 14px;
+        }
+
+        @include laptop {
+          gap: 14px 12px;
+        }
+
+        @include mobile {
+          margin-top: 20px;
+        }
+
+        &-checkbox {
+          flex: 0 0 calc(100% / 2 - 20px / 2);
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          height: 48px;
+          padding: 2px 20px;
+          box-sizing: border-box;
+          border: 1px solid #b0b0b0;
+          border-radius: 60px;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 120%;
+          color: #0e0e0e;
+          background-color: #f5f5f5;
+          cursor: pointer;
+
+          @include desktop {
+            height: 41px;
+            padding: 2px 17px;
+            font-size: 17px;
+          }
+
+          @include desktopsm {
+            height: 34px;
+            padding: 2px 14px;
+            font-size: 14px;
+          }
+
+          @include mobile {
+            flex: 1 1 100%;
+            height: 38px;
+          }
+
+          &-input {
+            display: none;
+          }
+
+          &:has(input:checked) {
+            color: #ff6200;
+            border-color: #ff6200;
+          }
+        }
+
+        &-text {
+          flex: 0 0 calc(100% / 2 - 20px / 2);
+
+          @include mobile {
+            flex: 1 1 100%;
+          }
+
+          &-input {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            height: 48px;
+            padding: 2px 20px;
+            box-sizing: border-box;
+            border: 1px solid #b0b0b0;
+            border-radius: 60px;
+            background-color: #f5f5f5;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            color: #0e0e0e;
+
+            @include desktop {
+              height: 41px;
+              padding: 2px 17px;
+              font-size: 17px;
+            }
+
+            @include desktopsm {
+              height: 34px;
+              padding: 2px 14px;
+              font-size: 14px;
+            }
+
+            @include mobile {
+              height: 38px;
+            }
+
+            &:user-valid {
+              color: #ff6200;
+              border-color: #ff6200;
+            }
+          }
+        }
+      }
+
+      &-form {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        margin: 53px 0 22px;
+
+        @include desktop {
+          gap: 22px;
+          margin: 49px 0 19px;
+        }
+
+        @include desktopsm {
+          gap: 14px;
+          margin: 38px 0 11px;
+        }
+
+        @include laptop {
+          margin: 27px 0 11px;
+        }
+
+        @include mobile {
+          margin: 40px 0 11px;
+        }
+
+        &-input,
+        &-button {
+          display: flex;
+          align-items: center;
+          min-height: 54px;
+          width: 100%;
+          box-sizing: border-box;
+
+          @include desktop {
+            min-height: 49px;
+          }
+
+          @include desktopsm {
+            min-height: 45px;
+          }
+        }
+
+        &-input {
+          max-width: 522px;
+          padding: 14px 19px;
+          font-weight: 400;
+          font-size: 18px;
+          color: #7d7d7d;
+          border: 2px solid #f5ac7f;
+          border-radius: 3px;
+          background-color: #f5f5f5;
+
+          @include desktop {
+            max-width: 445px;
+            padding: 12px 16px;
+            font-size: 16px;
+          }
+
+          @include desktopsm {
+            max-width: 356px;
+            padding: 10px 13px;
+            font-size: 14px;
+          }
+
+          @include mobile {
+            max-width: none;
+          }
+
+          &:user-invalid {
+            border-color: #ff0000;
+          }
+        }
+
+        &-button {
+          max-width: 400px;
+          margin: 27px 0 0;
+          justify-content: center;
+          padding: 4px 34px;
+          font-weight: 600;
+          font-size: 16px;
+          text-transform: uppercase;
+          text-align: center;
+          color: #fefefe;
+          border: 2px solid #ff6200;
+          border-radius: 3px;
+          background-color: #ff6200;
+          transition: background-color ease-in-out 0.2s;
+          cursor: pointer;
+
+          @include desktop {
+            max-width: 341px;
+            margin: 24px 0 0;
+            padding: 15px 34px;
+            font-size: 13px;
+          }
+
+          @include desktopsm {
+            margin: 17px 0 0;
+            padding: 13px 34px;
+            max-width: 304px;
+          }
+
+          @include mobile {
+            max-width: none;
+          }
+
+          &:hover {
+            background-color: #e45800;
+          }
+
+          &:active {
+            background-color: #f5ac7f;
+          }
+        }
+      }
+
+      &-agreement {
+        max-width: 310px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: #b3b3b3;
+
+        @include desktop {
+          font-size: 13px;
+        }
+
+        & > * {
+          line-height: 130%;
+        }
+
+        &-link {
+          color: #b3b3b3;
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+        }
+      }
+
+      &-controls {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 18px;
+        margin-top: 40px;
+
+        @include desktop {
+          margin-top: 34px;
+          font-size: 15px;
+        }
+
+        @include desktopsm {
+          margin-top: 27px;
+          font-size: 14px;
+        }
+
+        @include laptop {
+          margin-top: 24px;
+        }
+
+        @include mobile {
+          margin-top: 32px;
+        }
+
+        &-prev {
+          display: block;
+          width: 54px;
+          padding: 0;
+          box-sizing: border-box;
+          aspect-ratio: 1 / 1;
+          border: 1px solid #b0b0b0;
+          border-radius: 3px;
+          background: url(../images/kviz-v-1/prev.svg) center / 10px no-repeat;
+          background-color: #f5f5f5;
+          cursor: pointer;
+
+          @include desktop {
+            width: 46px;
+          }
+
+          @include desktopsm {
+            width: 39px;
+          }
+        }
+
+        &-next {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 54px;
+          padding: 10px 80px;
+          box-sizing: border-box;
+          font-weight: 600;
+          font-size: 16px;
+          color: #fefefe;
+          text-transform: uppercase;
+          text-align: center;
+          border: 1px solid #ff6200;
+          border-radius: 3px;
+          background: #ff6200;
+
+          @include desktop {
+            min-height: 46px;
+            padding: 10px 68px;
+            font-size: 14px;
+          }
+
+          @include desktopsm {
+            min-height: 39px;
+            padding: 10px 54px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    &-bg {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      overflow: hidden;
+
+      @include mobile {
+        position: static;
+        margin: 0 -26px;
+      }
+
+      &-car {
+        margin: 0;
+
+        @include mobile {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .reachend & {
+          display: none;
+        }
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 854px;
+          aspect-ratio: 854 / 568;
+          object-fit: contain;
+          transform: translateX(36%);
+
+          @include desktop {
+            width: 729px;
+          }
+
+          @include desktopsm {
+            width: 583px;
+          }
+
+          @include laptop {
+            transform: translateX(52%);
+          }
+
+          @include mobile {
+            max-width: none;
+            min-width: 515px;
+            width: 100%;
+            aspect-ratio: 515 / 342;
+            transform: none;
+          }
+
+          &_lg {
+            display: block;
+
+            @include mobile {
+              display: none;
+            }
+          }
+
+          &_sm {
+            display: none;
+
+            @include mobile {
+              display: block;
+            }
+          }
+        }
+      }
+
+      &-phone {
+        display: none;
+        justify-content: flex-end;
+        margin: 0;
+
+        .reachend & {
+          display: flex;
+        }
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 490px;
+          aspect-ratio: 490 / 565;
+          object-fit: contain;
+
+          @include desktop {
+            width: 418px;
+          }
+
+          @include desktopsm {
+            width: 334px;
+          }
+
+          @include laptop {
+            width: 256px;
+          }
+
+          @include mobile {
+            max-width: 360px;
+            width: 100%;
+          }
+
+          &_lg {
+            display: block;
+
+            @include mobile {
+              display: none;
+            }
+          }
+
+          &_sm {
+            display: none;
+
+            @include mobile {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
