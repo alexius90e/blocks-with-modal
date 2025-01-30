@@ -1,0 +1,171 @@
+.okno-spasibo-v1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgba($color: #000000, $alpha: 0);
+  transition: background-color ease-in-out 0.4s;
+  pointer-events: none;
+
+  &.active {
+    background-color: rgba($color: #000000, $alpha: 0.25);
+    pointer-events: all;
+  }
+
+  &__body {
+    position: relative;
+    max-height: 96dvh;
+    max-width: 566px;
+    padding: 48px 38px 53px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #fefefe;
+    transform: translateY(-1200px);
+    transition: transform ease-in-out 0.4s;
+
+    @include desktop {
+      padding: 42px 34px 47px;
+      max-width: 504px;
+    }
+
+    @include desktopsm {
+      max-width: 442px;
+      padding: 44px 30px 42px;
+    }
+
+    @include mobile {
+      max-width: calc(100dvw - 30px);
+      width: 360px;
+      padding: 38px 38px 31px;
+    }
+
+    .active & {
+      transform: translateY(0);
+    }
+  }
+
+  &__content {
+    max-height: calc(96vh - 42px * 2);
+    overflow: auto;
+
+    @include desktop {
+      max-height: calc(96vh - 34px * 2);
+    }
+
+    @include desktopsm {
+      max-height: calc(96vh - 30px * 2);
+    }
+
+    @include mobile {
+      max-height: calc(96vh - 38px * 2);
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #0e0e0e;
+
+    @include desktop {
+      font-size: 24px;
+    }
+
+    @include desktopsm {
+      margin: 0 0 16px;
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 12px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: -0.03em;
+    color: #7d7d7d;
+
+    @include desktop {
+      font-size: 10px;
+      font-size: 16px;
+    }
+
+    @include desktopsm {
+      font-size: 14px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 48px;
+    right: 38px;
+    z-index: 5;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: none;
+    outline: none;
+    background: url(../images/okno-spasibo-v1/close.svg) center / cover no-repeat;
+    cursor: pointer;
+
+    @include desktop {
+      top: 43px;
+      right: 34px;
+      width: 29px;
+      height: 29px;
+    }
+
+    @include desktopsm {
+      top: 42px;
+      right: 30px;
+      width: 25px;
+      height: 25px;
+    }
+
+    @include mobile {
+      top: 34px;
+      right: 20px;
+    }
+  }
+
+  &__callback {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 42px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+
+    @include desktop {
+      margin-top: 37px;
+      font-size: 18px;
+    }
+
+    @include desktopsm {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+
+    &-text {
+      color: #0e0e0e;
+    }
+
+    &-phone {
+      color: #1eb6e8;
+    }
+  }
+}
