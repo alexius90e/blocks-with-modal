@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/mask/imask.js" defer></script>
+    <script type="module" src="./js/mask/tel-mask.js" defer></script>
     <script type="module" src="./js/perv-ekr-v-6/perv-ekr-v-6.js" defer></script>
     <script type="module" src="./js/okno-spasibo-v1/okno-spasibo-v1.js" defer></script>
   </head>
@@ -154,7 +156,7 @@
                 required
               />
               <input
-                class="perv-ekr-v-6__callback-form-input"
+                class="perv-ekr-v-6__callback-form-input imask-phone-input"
                 type="tel"
                 placeholder="Телефон"
                 required
@@ -200,7 +202,7 @@
                 required
               />
               <input
-                class="perv-ekr-v-6__modal-callback-form-input"
+                class="perv-ekr-v-6__modal-callback-form-input imask-phone-input"
                 type="tel"
                 placeholder="Телефон"
                 required
@@ -219,8 +221,6 @@
           <button class="perv-ekr-v-6__modal-callback-close"></button>
         </div>
       </div>
-
-      
     </section>
 
     <section class="okno-spasibo-v1">
@@ -233,14 +233,12 @@
           </p>
 
           <p class="okno-spasibo-v1__text">
-            В рабочее время мы отвечаем в течение 1 часа, в нерабочее – вначале следующего
-            рабочего дня.
+            В рабочее время мы отвечаем в течение 1 часа, в нерабочее – вначале следующего рабочего
+            дня.
           </p>
 
           <div class="okno-spasibo-v1__callback">
-            <span class="okno-spasibo-v1__callback-text">
-              Если вопрос срочный, позвоните:
-            </span>
+            <span class="okno-spasibo-v1__callback-text"> Если вопрос срочный, позвоните: </span>
             <a class="okno-spasibo-v1__callback-phone" href="tel:+78000000000">
               +7 800 000-00-00
             </a>
