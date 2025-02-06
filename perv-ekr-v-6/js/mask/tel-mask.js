@@ -9,16 +9,27 @@ const phoneInputs = phoneInputClassNames
   .reduce((acc, array) => [...acc, ...array], []);
 
 phoneInputs.forEach((inputElement) => {
-  const basePlaceholder = inputElement.getAttribute('placeholder');
   const focusPlaceholder = '+7 (';
-
-  IMask(inputElement, maskOptions);
+  const mask = IMask(inputElement, maskOptions);
 
   inputElement.addEventListener('focus', (event) => {
-    event.currentTarget.setAttribute('placeholder', focusPlaceholder);
+    if (event.currentTarget.value === '') {
+      event.currentTarget.value = focusPlaceholder;
+      mask.updateValue();
+    }
   });
 
   inputElement.addEventListener('blur', (event) => {
-    event.currentTarget.setAttribute('placeholder', basePlaceholder);
+    if (event.currentTarget.value === focusPlaceholder) {
+      event.currentTarget.value = '';
+      mask.updateValue();
+    }
+  });
+
+  inputElement.addEventListener('input', (event) => {
+    if (event.currentTarget.value.length === 0) {
+      event.currentTarget.value = focusPlaceholder;
+      mask.updateValue();
+    }
   });
 });
